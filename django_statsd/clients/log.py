@@ -24,3 +24,6 @@ class StatsClient(StatsClient):
         """Set a gauge value."""
         log.info('Gauge: %s, %s%s, %s' % (
             stat, '' if not delta else 'diff ', value, rate))
+
+    def pipeline(self):
+        return self
